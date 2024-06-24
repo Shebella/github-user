@@ -8,5 +8,5 @@ interface UserRepository {
 
     fun getUserList(query: String): Flow<List<User>>
 
-    fun getUserDetail(login: String): Flow<UserDetail>
+    fun getUserDetail(username: String): Flow<UserDetail>
 }

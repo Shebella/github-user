@@ -11,8 +11,8 @@ class RepoRepositoryImpl @Inject constructor(
     private val repoRemoteDataSource: RepoRemoteDataSource
 ) : RepoRepository {
 
-    override fun getRepositoryList(login: String): Flow<List<RepoDetail>> {
-        return repoRemoteDataSource.fetchRepositoryList(login)
+    override fun getRepositoryList(username: String): Flow<List<RepoDetail>> {
+        return repoRemoteDataSource.fetchRepositoryList(username)
             .map { response ->
                 response.body()?.let { repoList ->
                     repoList.filter { repo ->

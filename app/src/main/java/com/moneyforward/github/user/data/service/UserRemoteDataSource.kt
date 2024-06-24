@@ -9,5 +9,5 @@ interface UserRemoteDataSource {
 
     fun fetchUserList(query: String): Flow<Response<SearchUser>>
 
-    fun fetchUserDetail(login: String): Flow<Response<User>>
+    fun fetchUserDetail(username: String): Flow<Response<User>>
 }

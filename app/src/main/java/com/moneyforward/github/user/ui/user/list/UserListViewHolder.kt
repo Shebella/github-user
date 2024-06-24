@@ -16,7 +16,7 @@ class UserListViewHolder(
         binding.user = user
         binding.executePendingBindings()
         binding.root.setOnClickListener {
-            val bundle = bundleOf(UserDetailFragment.USER_LOGIN to user.login)
+            val bundle = bundleOf(UserDetailFragment.USERNAME to user.login)
             Navigation.findNavController(binding.root).navigate(
                 R.id.action_user_list_to_user_detail,
                 bundle

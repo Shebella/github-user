@@ -11,10 +11,10 @@ class GetUserDetailUseCase @Inject constructor(
     private val userRepository: UserRepository,
     private val repoRepository: RepoRepository
 ) {
-    operator fun invoke(login: String): Flow<List<Detail>> {
+    operator fun invoke(username: String): Flow<List<Detail>> {
         return combine(
-            userRepository.getUserDetail(login),
-            repoRepository.getRepositoryList(login)
+            userRepository.getUserDetail(username),
+            repoRepository.getRepositoryList(username)
         ) { userDetail, repoDetailList ->
             val detailList = mutableListOf<Detail>()
             detailList.add(userDetail)

@@ -20,9 +20,9 @@ class UserDetailViewModel @Inject constructor(
 
     val detailList: MutableLiveData<List<Detail>> = _detailList
 
-    fun getUserDetail(login: String) {
+    fun getUserDetail(username: String) {
         viewModelScope.launch {
-            userDetailUseCase(login)
+            userDetailUseCase(username)
                 .catch { throwable ->
                     Log.d(UserDetailViewModel::class.java.name, throwable.toString())
                 }

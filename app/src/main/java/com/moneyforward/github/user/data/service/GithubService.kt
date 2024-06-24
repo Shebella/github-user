@@ -13,9 +13,9 @@ interface GithubService {
     @GET("search/users")
     suspend fun searchUsers(@Query("q") q: String): Response<SearchUser>
 
-    @GET("users/{login}")
-    suspend fun usersLogin(@Path("login") login: String): Response<User>
+    @GET("users/{username}")
+    suspend fun getUser(@Path("username") username: String): Response<User>
 
-    @GET("users/{login}/repos")
-    suspend fun usersRepos(@Path("login") login: String): Response<List<Repo>>
+    @GET("users/{username}/repos")
+    suspend fun getUserRepositories(@Path("username") username: String): Response<List<Repo>>
 }

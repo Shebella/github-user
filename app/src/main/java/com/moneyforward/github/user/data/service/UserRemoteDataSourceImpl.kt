@@ -17,9 +17,9 @@ class UserRemoteDataSourceImpl @Inject constructor(
         }
     }
 
-    override fun fetchUserDetail(login: String): Flow<Response<User>> {
+    override fun fetchUserDetail(username: String): Flow<Response<User>> {
         return flow {
-            emit(githubApi.usersLogin(login))
+            emit(githubApi.getUser(username))
         }
     }
 }

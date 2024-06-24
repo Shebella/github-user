@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Github User</string>
     <string name="github_user_list">Github User List</string>
@@ -6,5 +7,4 @@
     <string name="github_user_followers">Followers: %d</string>
     <string name="github_user_following">Following: %d</string>
     <string name="github_repository_stars">Starred: %d</string>
-
 </resources>

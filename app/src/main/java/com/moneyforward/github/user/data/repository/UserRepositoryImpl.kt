@@ -19,8 +19,8 @@ class UserRepositoryImpl @Inject constructor(
             }
     }
 
-    override fun getUserDetail(login: String): Flow<UserDetail> {
-        return userRemoteDataSource.fetchUserDetail(login)
+    override fun getUserDetail(username: String): Flow<UserDetail> {
+        return userRemoteDataSource.fetchUserDetail(username)
             .map { response ->
                 response.body()?.toUserDetail() ?: UserDetail()
             }

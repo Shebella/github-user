@@ -10,9 +10,9 @@ class RepoRemoteDataSourceImpl @Inject constructor(
     private val githubApi: GithubService
 ) : RepoRemoteDataSource {
 
-    override fun fetchRepositoryList(login: String): Flow<Response<List<Repo>>> {
+    override fun fetchRepositoryList(username: String): Flow<Response<List<Repo>>> {
         return flow {
-            emit(githubApi.usersRepos(login))
+            emit(githubApi.getUserRepositories(username))
         }
     }
 }

@@ -38,12 +38,12 @@ class UserDetailFragment : Fragment() {
             adapter.submitList(detailList)
         }
 
-        arguments?.getString(USER_LOGIN)?.let { login ->
-            viewModel.getUserDetail(login)
+        arguments?.getString(USERNAME)?.let { username ->
+            viewModel.getUserDetail(username)
         }
     }
 
     companion object {
-        const val USER_LOGIN = "user_login"
+        const val USERNAME = "username"
     }
 }

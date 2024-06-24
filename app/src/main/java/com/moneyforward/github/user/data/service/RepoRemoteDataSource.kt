@@ -6,5 +6,5 @@ import retrofit2.Response
 
 interface RepoRemoteDataSource {
 
-    fun fetchRepositoryList(login: String): Flow<Response<List<Repo>>>
+    fun fetchRepositoryList(username: String): Flow<Response<List<Repo>>>
 }

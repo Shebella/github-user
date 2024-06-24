@@ -14,7 +14,6 @@
         <action
             android:id="@+id/action_user_list_to_user_detail"
             app:destination="@id/UserDetailFragment" />
-
     </fragment>
 
     <fragment
@@ -26,6 +25,5 @@
         <action
             android:id="@+id/action_user_detail_to_user_list"
             app:destination="@id/UserListFragment" />
-
     </fragment>
 </navigation>
